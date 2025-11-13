@@ -1,24 +1,92 @@
 {
-    "1" : {
-        "id" : "1",
-        "name": "forest",
-        "next" : ["2", "3", "4"]
+    "start" : {
+        "name": "Дом",
+        "next" : ["loc1", "tr1", "d1"],
+        "user_next" : ["Дело", "Переход1", "Смерть1"],
+        "text1" : ,
+        "text2" : ,
+        "quiz" : ,
+        "answ" : 
     },
-    "2" : {
-        "id" : "2",
-        "name": "town",
-        "next" : ["1", "3"]
+    "loc1" : {
+        "name": "Дело",
+        "next" : ["tr2", "d2"],
+        "user_next" : ["Переход2", "Смерть2"],
+        "text1" : ,
+        "text2" : ,
+        "boss" : ,
+        "chance" : 
     },
-    "3" : {
-        "id" : "3",
-        "name": "prison",
+    "loc2" : {
+        "name": "Допрос",
+        "next" : ["loc3", "g_end"],
+        "user_next" : ["Тюрьма", "ХКонец"],
+        "text1" : ,
+        "text2" : ,
+        "quiz" : ,
+        "answ" : 
+    },
+    "loc3" : {
+        "name": "Тюрьма",
+        "next" : ["g_end", "b_end", "d4"],
+        "user_next" : ["ХКонец", "ПКонец", "Смерть4"],
+        "text1" : ,
+        "text2" : ,
+        "boss" : ,
+        "chance" : 
+    },
+    "tr1" : {
+        "name": "Переход1",
+        "next" : ["loc1", "loc2", "g_end"],
+        "user_next" : ["Дело", "Допрос", "ХКонец"],
+        "text1" : ,
+        "text2" : 
+    },
+    "tr2" : {
+        "name": "Переход2",
+        "next" : ["tr3", "g_end"],
+        "user_next" : ["Переход3", "ХКонец"],
+        "text1" : ,
+        "text2" : ,
+        "chance" : 
+    },
+    "tr3" : {
+        "name": "Переход3",
+        "next" : ["g_end", "b_end", "d3"],
+        "user_next" : ["ХКонец", "ПКонец", "Смерть3"],
+        "text1" : ,
+        "text2" : ,
+        "boss" : ,
+        "chance" : 
+    },
+    "d1" : {
+        "name" : "Смерть1",
+        "text" : ,
+        "game" : 
+    },
+    "d2" : {
+        "name" : "Смерть2",
+        "text" : ,
+        "game" :  
+    },
+    "d3" : {
+        "name" : "Смерть3",
+        "text" : ,
+        "game" : 
+    },
+    "d4" : {
+        "name" : "Смерть4",
+        "text" : ,
+        "game" : 
+    },
+    "g_end" : {
+        "name": "ХКонец",
         "next" : [],
-        "finish" : "1"
+        "game" : "1"
     },
-    "4" : {
-        "id" : "4",
-        "name": "home",
+    "b_end" : {
+        "name": "ПКонец",
         "next" : [],
-        "finish" : "1"
+        "game" : "1"
     }
 }
